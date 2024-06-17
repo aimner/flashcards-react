@@ -1,0 +1,5 @@
+@use '../../styles/mixins/all_mixins' as mixins;
+
+.layout {
+  @include mixins.flex(column, flex-start, center, nowrap, 3.6rem);
+}

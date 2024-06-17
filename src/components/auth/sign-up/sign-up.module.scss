@@ -1,0 +1,9 @@
+@use '../../../styles/mixins/all_mixins' as mixins;
+
+.wrapper {
+  @include mixins.flex(column, center, stretch, nowrap, 1.5rem);
+}
+
+.form {
+  @include mixins.flex(column, center, stretch, nowrap, 1.5rem);
+}

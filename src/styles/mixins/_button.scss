@@ -1,0 +1,102 @@
+@use 'font' as fontMixins;
+@use 'flex' as flexMixins;
+
+@mixin button {
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  padding: 0.6rem 2.8rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  @include fontMixins.font(1.6rem, normal, 400, 2.4rem, var(--color-light-100));
+  @include flexMixins.flex(row, center, center, nowrap, 1rem);
+
+  &:focus-visible {
+    border: none;
+    outline: 0.2rem solid var(--color-info-700);
+  }
+}
+
+@mixin primary {
+  @include button;
+  background-color: var(--color-accent-500);
+  box-shadow: 0 0.4rem 0.4rem 0 var(--color-accent-500);
+
+  &:hover {
+    background-color: var(--color-accent-300);
+  }
+
+  &:active {
+    background-color: var(--color-accent-700);
+  }
+
+  &:disabled {
+    background-color: var(--color-accent-900);
+    color: var(--color-light-900);
+    cursor: default;
+  }
+}
+
+@mixin secondary {
+  @include button;
+  background-color: var(--color-dark-300);
+  box-shadow: 0 0.4rem 0.4rem 0 var(--color-dark-500);
+
+  &:hover {
+    background-color: var(--color-dark-100);
+  }
+
+  &:active {
+    background-color: var(--color-dark-300);
+  }
+
+  &:disabled {
+    background-color: var(--color-dark-300);
+    color: var(--color-light-900);
+    cursor: default;
+  }
+}
+
+@mixin tertiary {
+  @include button;
+  background-color: inherit;
+  border: 0.1rem solid var(--color-accent-500);
+  color: var(--color-accent-500);
+
+  &:hover {
+    background-color: var(--color-dark-500);
+  }
+
+  &:active {
+    background-color: var(--color-accent-900);
+  }
+
+  &:disabled {
+    background-color: inherit;
+    border-color: var(--color-accent-900);
+    color: var(--color-accent-900);
+    cursor: default;
+  }
+}
+
+@mixin link {
+  @include button;
+  background-color: inherit;
+  border-radius: 13rem;
+  color: var(--color-accent-500);
+
+  &:hover {
+    color: var(--color-accent-300);
+  }
+
+  &:active {
+    color: var(--color-accent-700);
+  }
+
+  &:disabled {
+    background-color: inherit;
+    color: var(--color-accent-900);
+    cursor: default;
+  }
+}

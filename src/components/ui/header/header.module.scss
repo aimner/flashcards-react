@@ -1,0 +1,29 @@
+@use '../../../styles/mixins/all_mixins' as mixins;
+
+.header {
+  width: 100vw;
+  background-color: var(--color-dark-700);
+  padding-block: 1.2rem;
+  border-bottom: 0.1rem solid var(--color-dark-500);
+  &Block {
+    @include mixins.flex(row, space-between, center, nowrap, 0);
+    max-width: 128rem;
+    margin: 0 auto;
+  }
+
+  &AvatarBlock {
+    @include mixins.flex(row, center, center, nowrap, 1.2rem);
+    cursor: pointer;
+    span {
+      @include mixins.font(1.6rem, normal, 700, 2.4rem, var(--color-light-100));
+      border-bottom: 0.1rem dashed var(--color-light-100);
+    }
+
+    img {
+      width: 3.6rem;
+      height: 3.6rem;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@use '../../../styles/mixins/all_mixins' as mixins;
+
+.wrapper {
+  @include mixins.flex(column, center, flex-start, nowrap, 0.1rem);
+
+  width: 100%;
+}
+
+.inputBlock {
+  position: relative;
+  width: 100%;
+}
+
+.text {
+  @include mixins.input;
+}
+
+.password {
+  @include mixins.password;
+}
+
+.search {
+  @include mixins.search;
+}
+
+.inputError {
+  @include mixins.error;
+}
+
+.textError {
+  @include mixins.font(1.2rem, normal, 400, 2.4rem, var(--color-danger-300));
+}
+
+.label {
+  @include mixins.label;
+}
+
+.icon {
+  cursor: pointer;
+
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.searchIcon {
+  left: 1.4rem;
+}
+
+.passwordIcon {
+  right: 1.4rem;
+}
+
+.disabledIcon,
+.disabledLabel {
+  cursor: default;
+  color: var(--color-dark-300);
+}

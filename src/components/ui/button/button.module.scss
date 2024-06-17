@@ -1,0 +1,21 @@
+@use '../../../styles/mixins/all_mixins' as buttonMixins;
+
+.primary {
+  @include buttonMixins.primary;
+}
+
+.secondary {
+  @include buttonMixins.secondary;
+}
+
+.tertiary {
+  @include buttonMixins.tertiary
+}
+
+.link {
+  @include buttonMixins.link
+}
+
+.fullWidth {
+  width: 100%;
+}

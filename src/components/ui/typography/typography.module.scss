@@ -1,0 +1,142 @@
+@use '@/styles/index' as *;
+
+.large {
+  @include font(
+    var(--font-size-xxl),
+    normal,
+    var(--font-weight-bold),
+    var(--line-height-l),
+    var(--color-light-100)
+  );
+}
+
+.h1 {
+  @include font(
+    var(--font-size-xl),
+    normal,
+    var(--font-weight-bold),
+    var(--line-height-l),
+    var(--color-light-100)
+  );
+}
+
+.h2 {
+  @include font(
+    var(--font-size-l),
+    normal,
+    var(--font-weight-bold),
+    var(--line-height-m),
+    var(--color-light-100)
+  );
+}
+
+.h3 {
+  @include font(
+    var(--font-size-m),
+    normal,
+    var(--font-weight-bold),
+    var(--line-height-m),
+    var(--color-light-100)
+  );
+}
+
+.body1 {
+  @include font(
+    var(--font-size-m),
+    normal,
+    var(--font-weight-regular),
+    var(--line-height-m),
+    var(--color-light-100)
+  );
+}
+
+.subtitle1 {
+  @include font(
+    var(--font-size-m),
+    normal,
+    var(--font-weight-bold),
+    var(--line-height-m),
+    var(--color-light-100)
+  );
+}
+
+.body2 {
+  @include font(
+    var(--font-size-s),
+    normal,
+    var(--font-weight-regular),
+    var(--line-height-m),
+    var(--color-light-100)
+  );
+}
+
+.subtitle2 {
+  @include font(
+    var(--font-size-s),
+    normal,
+    var(--font-weight-bold),
+    var(--line-height-m),
+    var(--color-light-100)
+  );
+}
+
+.overline {
+  @include font(
+    var(--font-size-xs),
+    normal,
+    var(--font-weight-bold),
+    var(--line-height-s),
+    var(--color-light-100)
+  );
+}
+
+.caption {
+  @include font(
+    var(--font-size-xs),
+    normal,
+    var(--font-weight-regular),
+    var(--line-height-s),
+    var(--color-light-100)
+  );
+}
+
+.link1,
+.link1:visited {
+  @include font(
+    var(--font-size-s),
+    normal,
+    var(--font-weight-regular),
+    var(--line-height-m),
+    var(--color-accent-500)
+  );
+
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.link2,
+.link2:visited {
+  @include font(
+    var(--font-size-xs),
+    normal,
+    var(--font-weight-regular),
+    var(--line-height-s),
+    var(--color-light-100)
+  );
+
+  cursor: pointer;
+  color: var(--color-text-link);
+  text-decoration: underline;
+}
+
+.error {
+  @include font(
+    var(--font-size-xs),
+    normal,
+    var(--font-weight-regular),
+    var(--line-height-m),
+    var(--color-light-100)
+  );
+
+  color: var(--color-danger-300);
+}
